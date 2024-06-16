@@ -9,7 +9,7 @@ const RedirectPage = () => {
     }, []); 
     return (
         <div className="main-login">
-      Redirecting...
+      Redirecting..
     </div>
     );
 };
