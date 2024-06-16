@@ -1,9 +1,9 @@
 import gsap from "gsap";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 
 const LoginPage = ({Verification}) => {
    const navigate = useNavigate();
@@ -60,7 +60,7 @@ const LoginPage = ({Verification}) => {
     } catch (error) {
       setLoading(false);
       notify("Somthing wents wrong")
-      return console.log("error aaya h", error);
+      return
     }
   };
 

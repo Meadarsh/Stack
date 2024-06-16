@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import LoginPage from '../pages/LoginPage'
-
 const StorageCal = ({data}) => {
 const [size,setSize]=useState('0 B')
 let percent=(data/104857600)*100
-console.log("g",percent);
 useEffect(()=>{
   
 

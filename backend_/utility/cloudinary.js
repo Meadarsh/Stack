@@ -13,7 +13,6 @@ cloudinary.config({
    const response= await cloudinary.uploader.upload(localFilePath,{
         resource_type:"auto"
     })
-    console.log('file is uploaded')
     return response
   } catch (error) {
     console.log("unable to upload",error)

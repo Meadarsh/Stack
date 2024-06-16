@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import QRCode from 'react-qr-code'
-import { ToastContainer,toast } from 'react-toastify'
+import {toast } from 'react-toastify'
 const Qrcode = ({data, id}) => {
     const[deleting,setDeleting]=useState(false)
    async function DeleteFile(){
-       console.log(id)
     setDeleting(true);
     toast.loading("Deleting")
         try {

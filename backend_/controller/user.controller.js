@@ -54,7 +54,7 @@ const registerUser = asyncHandler(async (req, res) => {
 const loginUser = asyncHandler(async (req, res) => {
  
   const { email, password } = req.body;
-  //checking empty fields
+
   if (!email || !password) {
    return res.status(400).json({
       message: "Please enter all the details.",
@@ -79,21 +79,18 @@ const loginUser = asyncHandler(async (req, res) => {
   const loggedInUser = await User.findById(Valid._id).select(
     "-password -refreshToken"
   );
-
+  
    const option = {
     httpOnly: true,
     secure: true,
       sameSite: 'None',
   };
-
-  return res
-    .status(200)
+  console.log("hahah");
+  return res.status(200)
     .cookie("accessToken", accessToken, option)
     .cookie("refreshToken", refreshToken, option)
     .json({
       userInfo: loggedInUser,
-      accessToken,
-      refreshToken,
       message: "User logged in successfully "
     })
 });
